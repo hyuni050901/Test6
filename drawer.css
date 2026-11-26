@@ -1,4 +1,4 @@
-/* drawer.css - 햄버거 메뉴: 왼쪽에서 메뉴가 나오고 본문은 오른쪽으로 밀리며 축소됩니다.
+/* drawer.css - 햄버거 메뉴: 왼쪽에서 메뉴가 나오고 본문은 크기 그대로 오른쪽으로 밀립니다.
    layout.css 뒤에 불러오세요. (layout.css의 고정 사이드바 동작을 덮어씁니다)
    되돌리려면 index.html에서 이 파일과 menu.js 줄만 지우면 됩니다. */
 
@@ -18,8 +18,8 @@ body { padding-left: 0; overflow: hidden; background: #1c2b21; }
   transition: transform .5s cubic-bezier(.22, .8, .3, 1), border-radius .5s ease, box-shadow .5s ease;
 }
 html.menu-open #app-shell {
-  transform: translateX(var(--side)) scale(.86);
-  border-radius: 26px;
+  transform: translateX(var(--side));
+  border-radius: 22px 0 0 22px;
   box-shadow: -12px 0 40px rgba(0, 0, 0, .35);
 }
 
